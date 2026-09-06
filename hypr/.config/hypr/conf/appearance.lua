@@ -7,8 +7,8 @@ hl.config({
 
     border_size = 2,
     col = {
-      active_border = { colors = { "rgba(7dd3fcee)", "rgba(0369a1ee)" }, angle = 45 },
-      inactive_border = "rgba(262626ee)",
+      active_border = { colors = { "rgba(3d59a1ee)", "rgba(6183bbee)" }, angle = 45 },
+      inactive_border = "rgba(101014ee)",
     },
 
     -- layout = dwindle
@@ -32,7 +32,6 @@ hl.config({
     -- drop_shadow = no 
     -- shadow_range = 4
     -- shadow_render_power = 3
-    -- col.shadow = rgba(1a1a1aee)
   },
 
   animations = {

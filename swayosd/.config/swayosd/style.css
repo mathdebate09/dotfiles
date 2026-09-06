@@ -1,0 +1,35 @@
+window {
+  background: rgba(22, 22, 30, 0.85);
+  border-radius: 12px;
+  border: 1px solid rgba(84, 92, 126, 0.15);
+  padding: 10px 20px;
+  min-width: 280px;
+}
+
+#osd-window {
+  background: transparent;
+}
+
+image {
+  color: #c0caf5;
+  margin-right: 16px;
+  -gtk-icon-size: 16px;
+}
+
+progressbar {
+  border-radius: 4px;
+  min-height: 3px;
+  min-width: 220px;
+}
+
+progressbar trough {
+  background-color: rgba(84, 92, 126, 0.2);
+  border-radius: 4px;
+  min-height: 3px;
+}
+
+progressbar progress {
+  background-color: #3d59a1;
+  border-radius: 4px;
+  min-height: 3px;
+}

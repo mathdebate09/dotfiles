@@ -3,41 +3,40 @@
 }
 
 #waybar {
-  /* background: #171717; */
-  background: #0a0a0a;
-  color: #fff;
+  background: rgba(22, 22, 30, 0.85);
+  color: #a9b1d6;
 }
 
 tooltip {
-  background: #171717;
-  border: 1px solid #404040;
+  background: rgba(16, 16, 20, 0.95);
+  border: 1px solid #29355a;
   border-radius: 6px;
 }
 
 tooltip label {
-  color: #fff;
+  color: #c0caf5;
   padding: 4px 8px;
 }
 
 /* LEFT MODULES */
 
 #clock {
-  color: #fff;
+  color: #c0caf5;
 }
 
 #workspaces button {
-  color: #737373;
+  color: #565f89;
   padding-left: 4px;
   padding-right: 4px;
   border-radius: 0px;
 }
 
 #workspaces button:hover {
-  background-color: #262626;
+  background-color: rgba(32, 35, 48, 0.85);
 }
 
 #workspaces button.active {
-  color: #84cc16;
+  color: #3d59a1;
 }
 
 #tray {
@@ -47,32 +46,32 @@ tooltip label {
 /* CENTER MODULE */
 
 #window {
-  color: #fff;
+  color: #a9b1d6;
 }
 
 /* RIGHT MODULES */
 
 #custom-updates {
-  color: #84cc16;
+  color: #73daca;
 }
 
 #temperature {
-  color: #eab308;
+  color: #e0af68;
   margin-right: 4px;
 }
 
 #memory {
-  color: #d946ef;
+  color: #bb9af7;
   margin-right: 4px;
 }
 
 #cpu {
-  color: #0ea5e9;
+  color: #7dcfff;
   margin-right: 4px;
 }
 
 #pulseaudio {
-  color: #14b8a6;
+  color: #73daca;
   margin-right: 4px;
 }
 
@@ -81,20 +80,20 @@ tooltip label {
 }
 
 #custom-nightmode {
-  color: #f97316;
+  color: #ff9e64;
   margin-right: 8px;
 }
 
 #custom-bluetooth {
-  color: #3b82f6;
+  color: #7aa2f7;
   margin-right: 8px;
 }
 
 #network {
-  color: #3b82f6;
+  color: #7dcfff;
   margin-right: 8px;
 }
 
 #custom-powermenu {
-  color: #f43f5e;
+  color: #f7768e;
 }
