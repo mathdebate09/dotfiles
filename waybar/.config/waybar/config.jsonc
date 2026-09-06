@@ -1,0 +1,136 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "margin-bottom": 0,
+  "modules-left": ["clock", "hyprland/workspaces", "tray"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "custom/updates",
+    "temperature",
+    "memory",
+    "cpu",
+    "pulseaudio",
+    "battery",
+    "custom/nightmode",
+    "custom/bluetooth",
+    "network",
+    "custom/powermenu"
+  ],
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8
+  },
+  "clock": {
+    // 24 hour
+    // "format": " {:%H:%M} ",
+    // 12 hour
+    "format": " 󰸗 {:%I:%M %p} ",
+    "interval": 60,
+    "tooltip": true,
+    "tooltip-format": "{:%A, %d %B}"
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "separate-outputs": false,
+    "active-only": false,
+    // turn on true to show same all workspaces on each monitor
+    "all-outputs": false,
+    "sort-by": "number",
+    "format-icons": {
+      // 1-10
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      // 11-20
+      "11": "1",
+      "12": "2",
+      "13": "3",
+      "14": "4",
+      "15": "5",
+      "16": "6",
+      "17": "7",
+      "18": "8",
+      "19": "9",
+      "20": "10",
+      // 21-30
+      "21": "1",
+      "22": "2",
+      "23": "3",
+      "24": "4",
+      "25": "5",
+      "26": "6",
+      "27": "7",
+      "28": "8",
+      "29": "9",
+      "30": "10"
+    }
+  },
+  "hyprland/window": {
+    "format": "{}"
+  },
+  "custom/updates": {
+    "exec": "bash -lc 'r=$(checkupdates 2>/dev/null | wc -l); a=$(paru -Qua 2>/dev/null | wc -l); [ $((r+a)) -gt 0 ] && printf \"󰏗   \" || printf \"󰏗   \"'",
+    "interval": 600,
+    "tooltip": true,
+    "tooltip-format": "Left click: update (paru -Syyu --noconfirm)",
+    "on-click": "kitty -e bash -lc 'paru -Syyu --noconfirm'"
+  },
+  "temperature": {
+    "format": "{icon} {temperatureC}°C ",
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    "format-icons": ["", "", ""]
+  },
+  "memory": {
+    "format": "󰫗 {}% ",
+    "tooltip": true,
+    "tooltip-format": "Memory: {}%"
+  },
+  "cpu": {
+    "format": " {usage}% ",
+    "tooltip": true,
+    "tooltip-format": "CPU: {usage}%"
+  },
+  "pulseaudio": {
+    "format": " {volume}% ",
+    "scroll-step": 1,
+    "on-click": "pavucontrol"
+  },
+  "custom/nightmode": {
+    "exec": "bash -lc '~/.config/waybar/scripts/hyprsunset.sh status'",
+    "return-type": "json",
+    "interval": 2,
+    "tooltip": true,
+    "on-click": "bash -lc '~/.config/waybar/scripts/hyprsunset.sh toggle'"
+  },
+  "custom/bluetooth": {
+    "format": "󰂯 ",
+    "tooltip": true,
+    "tooltip-format": "Bluetooth",
+    "on-click": "blueman-manager",
+    "on-click-right": "blueman-adapters"
+  },
+  "network": {
+    "format": "󰖩 ",
+    "tooltip-format": "{essid}",
+    "interval": 2,
+    "on-click": "kitty -e nmtui"
+  },
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "custom/powermenu": {
+    "format": " ",
+    "tooltip": true,
+    "tooltip-format": "Power menu",
+    "on-click": "exec wlogout -p layer-shell"
+  }
+}
