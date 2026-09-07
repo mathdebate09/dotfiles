@@ -31,6 +31,26 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 
+local function cycleAndFullscreen(direction)
+	return function()
+		if direction == "next" then
+			hl.dispatch(hl.dsp.window.cycle_next())
+		else
+			hl.dispatch(hl.dsp.window.cycle_prev())
+		end
+		hl.dispatch(hl.dsp.window.fullscreen({ mode = "maximized" }))
+	end
+end
+
+hl.bind(mainMod .. " + TAB", cycleAndFullscreen("next"))
+hl.bind(mainMod .. " + SHIFT + TAB", cycleAndFullscreen("previous"))
+
+-- Resize the focused tiled window without needing to grab a border precisely
+hl.bind(mainMod .. " + CTRL + left", function() hl.window.resize({ x = -20, y = 0, relative = true }) end)
+hl.bind(mainMod .. " + CTRL + right", function() hl.window.resize({ x = 20, y = 0, relative = true }) end)
+hl.bind(mainMod .. " + CTRL + up", function() hl.window.resize({ x = 0, y = -20, relative = true }) end)
+hl.bind(mainMod .. " + CTRL + down", function() hl.window.resize({ x = 0, y = 20, relative = true }) end)
+
 -- Move focus with mainMod + hjkl 
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))

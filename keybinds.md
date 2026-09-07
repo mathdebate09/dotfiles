@@ -29,6 +29,9 @@
 | `SUPER + Right` | Focus the window to the right |
 | `SUPER + Up` | Focus the window above |
 | `SUPER + Down` | Focus the window below |
+| `SUPER + Tab` | Focus the next window and maximize it within the layout |
+| `SUPER + SHIFT + Tab` | Focus the previous window and maximize it within the layout |
+| `SUPER + CTRL + Arrow keys` | Resize the focused tiled window by 20 pixels |
 | `SUPER + H` | Focus the window to the left |
 | `SUPER + K` | Focus the window above |
 | `SUPER + J` | Focus the window below |
