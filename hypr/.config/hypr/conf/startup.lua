@@ -1,6 +1,8 @@
 hl.on("hyprland.start", function()
   hl.exec_cmd("/usr/bin/gnome-keyring-daemon --start --components=secrets")
   hl.exec_cmd("swayosd-server --style ~/.config/swayosd/style.css")
+  hl.exec_cmd("wl-paste --type text --watch cliphist store -max-items 30 &")
+  hl.exec_cmd("wl-paste --type image --watch cliphist store -max-items 30 &")
   hl.exec_cmd("hyprctl setcursor Bibata-Modern-Classic 24")
   hl.exec_cmd("sh -c 'waybar &'")
   hl.exec_cmd("awww-daemon")

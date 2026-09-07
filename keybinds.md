@@ -10,6 +10,7 @@
 | `SUPER + M` | Exit Hyprland |
 | `SUPER + E` | Open Nemo file manager |
 | `SUPER + V` | Toggle floating mode for the focused window |
+| `SUPER + SHIFT + V` | Open the last 30 clipboard entries and copy the selected one |
 | `SUPER + Space` | Open Wofi application launcher |
 | `SUPER + R` | Open Wofi application launcher |
 | `SUPER + P` | Toggle pseudo-tiled mode |
@@ -32,8 +33,8 @@
 | `SUPER + K` | Focus the window above |
 | `SUPER + J` | Focus the window below |
 | `SUPER + L` | Focus the window to the right |
-| `SUPER + S` | Take a screenshot of DP-1 and copy it to the clipboard |
-| `SUPER + SHIFT + S` | Select an area, take a screenshot, and copy it to the clipboard |
+| `SUPER + S` | Take a screenshot of DP-1 and copy it to the clipboard/history |
+| `SUPER + SHIFT + S` | Select an area, take a screenshot, and copy it to the clipboard/history |
 | `SUPER + SHIFT + CTRL + B` | Toggle compact mode with no borders, gaps, or radius |
 | `SUPER + SHIFT + CTRL + A` | Toggle animations |
 | `SUPER + mouse wheel down` | Focus the next existing workspace |

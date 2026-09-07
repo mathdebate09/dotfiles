@@ -9,6 +9,7 @@ hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + M", hl.dsp.exit())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("sh ~/.config/hypr/scripts/clipboard-history.sh"))
 hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo()) -- dwindle
@@ -37,10 +38,10 @@ hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
 hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
 
 -- screenshot keybind
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd([[bash -c 'grim -o DP-1 "${HOME}/Pictures/screenshots/SS$(date +%Y-%m-%d_%H-%M-%S).png" && wl-copy < "${HOME}/Pictures/screenshots/SS$(date +%Y-%m-%d_%H-%M-%S).png"']]))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("sh ~/.config/hypr/scripts/screenshot.sh screen"))
 
 -- screenshot + crop keybind
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd([[bash -c 'grim -g "$(slurp)" "${HOME}/Pictures/screenshots/SS$(date +%Y-%m-%d_%H-%M-%S).png" && wl-copy < "${HOME}/Pictures/screenshots/SS$(date +%Y-%m-%d_%H-%M-%S).png"']]))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("sh ~/.config/hypr/scripts/screenshot.sh area"))
 
 -- toggle no border, no gaps, no border radius
 hl.bind(mainMod .. " + SHIFT + CTRL + B", hl.dsp.exec_cmd("~/.config/hypr/scripts/toggle-compact.sh"))
