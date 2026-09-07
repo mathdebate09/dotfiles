@@ -2,8 +2,14 @@
   "layer": "top",
   "position": "bottom",
   "margin-bottom": 0,
-  "modules-left": ["clock", "hyprland/workspaces", "tray"],
-  "modules-center": ["hyprland/window"],
+  "modules-left": [
+    "clock",
+    "hyprland/workspaces",
+    "tray"
+  ],
+  "modules-center": [
+    "hyprland/window"
+  ],
   "modules-right": [
     "custom/updates",
     "temperature",
@@ -86,7 +92,11 @@
     "format": "{icon} {temperatureC}°C ",
     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 80,
-    "format-icons": ["", "", ""]
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
   },
   "memory": {
     "format": "󰫗 {}% ",
@@ -114,8 +124,8 @@
     "format": "󰂯 ",
     "tooltip": true,
     "tooltip-format": "Bluetooth",
-    "on-click": "blueman-manager",
-    "on-click-right": "blueman-adapters"
+    "on-click": "bash -lc 'bash ~/.config/waybar/scripts/bluetooth.sh'",
+    "on-click-right": "bash -lc 'bash ~/.config/waybar/scripts/bluetooth.sh'"
   },
   "network": {
     "format": "󰖩 ",
@@ -125,12 +135,18 @@
   },
   "battery": {
     "format": "{capacity}% {icon}",
-    "format-icons": ["", "", "", "", ""]
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   "custom/powermenu": {
     "format": " ",
     "tooltip": true,
     "tooltip-format": "Power menu",
-    "on-click": "exec wlogout -p layer-shell"
+    "on-click": "bash -lc 'bash ~/.config/waybar/scripts/powermenu.sh'"
   }
 }
