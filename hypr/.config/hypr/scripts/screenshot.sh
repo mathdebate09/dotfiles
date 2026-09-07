@@ -11,7 +11,8 @@ if [ "${1:-screen}" = "area" ]; then
   [ -n "$geometry" ] || exit 0
   grim -g "$geometry" "$output"
 else
-  grim -o DP-1 "$output"
+  grim "$output"
 fi
 
 wl-copy --type image/png < "$output"
+swappy --file "$output" >/dev/null 2>&1 &

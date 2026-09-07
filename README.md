@@ -75,7 +75,7 @@ The `-D` command removes links managed by Stow; it does not remove the package f
 - Run Stow from `~/.dotfiles` so the package directories are resolved correctly.
 - Back up existing configuration files before adopting them into the repository.
 - Programs referenced by the configurations must be installed separately, such as Hyprland, Hyprlock, `awww`, Waybar, Kitty, `swayosd`, and `btop`.
-- Screenshot and clipboard history support requires `grim`, `slurp`, `wl-clipboard`, and `cliphist`.
+- Screenshot and clipboard history support requires `grim`, `slurp`, `swappy`, `wl-clipboard`, and `cliphist`.
 
 ## Credits
 
